@@ -13,8 +13,8 @@ On your phone, press and hold the [BBC iPlayer Play listing](https://play.google
 3. Open this guide in your phone’s browser. Press and hold the [BBC iPlayer Play listing](https://play.google.com/store/apps/details?id=bbc.iplayer.android), tap **Share link** or **Share**, then choose **Aurora Store**. You can keep Google Play as your default.
 4. Check that Aurora offers **v1.0.1 (101)** directly under **British Broadcasting Corporation**. This is the Android TV version the patch supports. If you see a different version, check that the Kirkwood profile is selected.
 5. Tap **Install** to download. When Android asks whether to install BBC iPlayer, tap **Cancel**. Dismiss Aurora’s follow-up message if it appears.
-6. Return to Aurora’s **Apps** screen. Tap **Downloads**, press and hold the completed iPlayer row, and tap **Export**. Save `bbc.iplayer.android.zip` in **Downloads**.
-7. Open **Downloads** in your file manager and choose **Rename** on `bbc.iplayer.android.zip`. Put the cursor after `.zip`, press Backspace three times to keep the dot, and type `apks`. Save the filename as `bbc.iplayer.android.apks` so Morphe can open it. [Material Files, used in the animation](https://github.com/zhanghai/MaterialFiles)
+6. Return to Aurora’s **Apps** screen. Tap **Downloads**, press and hold the completed iPlayer row, and tap **Export**. Save the file in **Downloads**. Aurora exports a ZIP, so Android can append `.zip` after saving even if you enter `.apks` in the export dialog. [Aurora export implementation](https://github.com/AuroraOSS/AuroraStore/blob/master/app/src/main/java/com/aurora/store/compose/ui/downloads/DownloadsScreen.kt)
+7. If the saved file already ends in `.apks`, go to step 8. Otherwise, open **Downloads** in your file manager and rename the export to `bbc.iplayer.android.apks`. If it was saved as `bbc.iplayer.android.apks.zip`, remove the final `.zip`. [Material Files, used in the animation](https://github.com/zhanghai/MaterialFiles)
 
 ## Patch and save the APK with Morphe Manager
 
