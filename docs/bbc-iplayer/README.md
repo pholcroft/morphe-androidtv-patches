@@ -4,6 +4,8 @@ The patch **Make iPlayer 1.0.1 work on more TVs** targets the Android TV build `
 
 ## Phone walkthrough
 
+[Add UK TV Patches to Morphe](https://morphe.software/add-source?github=pholcroft/uk-tv-morphe-patches&name=UK%20TV%20Patches) on an Android phone with Morphe Manager installed.
+
 [Download, patch and save the APK on your phone](walkthroughs/README.md).
 
 For Morphe Desktop, follow the [Aurora Store steps](walkthroughs/README.md#download-the-apk-with-aurora-store) and copy the resulting `.apks` file to your computer.
