@@ -24,4 +24,4 @@ The equivalent command in Morphe Desktop 2.3.0 is below. Put the JAR, [preview p
 java -jar morphe-desktop-2.3.0.jar patch --exclusive --patches bbc-iplayer-1.0.1.mpp --enable "Make iPlayer 1.0.1 work on more TVs" --out iplayer-patched.apk bbc.iplayer.android.apks
 ```
 
-Version 1.0.1 launched, signed in and started video playback on a Thomson Streaming Box Plus 270 alongside the legacy build. The Thomson catalogue showed UHD badges. Actual UHD stream resolution and live TV playback are still unverified.
+Version 1.0.1 launched, signed in and started video playback on a Thomson Streaming Box Plus 270.
