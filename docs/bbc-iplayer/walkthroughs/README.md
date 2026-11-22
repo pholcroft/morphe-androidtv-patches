@@ -1,23 +1,26 @@
-# Part 1. Download the BBC iPlayer APK with Aurora Store
+# Download and patch BBC iPlayer for Android TV on your phone
 
-Start at Aurora Store’s **Apps** screen with Aurora already installed and set up. Save the [Google TV Streamer profile](https://github.com/pholcroft/morphe-androidtv-patches/blob/feat/bbc-iplayer-1.0.1-preview/docs/bbc-iplayer/google-tv-streamer-kirkwood.properties) to your phone’s Downloads folder before starting.
+Have Aurora Store and [Morphe Manager](https://github.com/MorpheApp/morphe-manager) installed and set up. Save the [Google TV Streamer profile](../google-tv-streamer-kirkwood.properties) to your phone’s Downloads folder. In Morphe Manager, add the [BBC iPlayer Android TV Preview patch source](../preview/bbc-iplayer-1.0.1.mpp) under **Sources → + → Select patch source files**. The animation starts in Aurora with that setup complete. [Morphe patch source documentation](https://github.com/MorpheApp/morphe-manager/blob/main/docs/patch-sources.md)
 
-On your phone, press and hold the [BBC iPlayer Play listing](https://play.google.com/store/apps/details?id=bbc.iplayer.android), then choose **Share link → Aurora Store**.
+On your phone, press and hold the [BBC iPlayer Play listing](https://play.google.com/store/apps/details?id=bbc.iplayer.android), then choose **Share link → Aurora Store** when you reach step 3.
 
-![Download the BBC iPlayer Android TV APK with Aurora Store and prepare it for Morphe](aurora-iplayer-walkthrough.png)
+![Download the BBC iPlayer Android TV APK in Aurora Store and patch and save it in Morphe Manager](aurora-iplayer-walkthrough.png)
+
+## Download the APK with Aurora Store
 
 1. In Aurora, open the top-right menu, then **Spoof manager → Device → ⋮ → Import**. In the file picker, open **Downloads** and select the `.properties` file.
 2. Select **Google TV Streamer (kirkwood) - experimental** in the device list, tap **Restart**, then choose **Anonymous** when Aurora asks you to sign in.
-3. Open this guide in your phone’s browser. Press and hold the [BBC iPlayer Play listing](https://play.google.com/store/apps/details?id=bbc.iplayer.android), tap **Share link** or **Share**, then choose **Aurora Store**. You can keep Google Play as your default. [How Aurora reads shared links](https://github.com/AuroraOSS/AuroraStore/blob/master/app/src/main/java/com/aurora/extensions/Intent.kt)
-4. Check that Aurora offers **1.0.1 (101)**, the Android TV APK this patch supports. If you see a different version, check that the Kirkwood profile is selected.
+3. Open this guide in your phone’s browser. Press and hold the [BBC iPlayer Play listing](https://play.google.com/store/apps/details?id=bbc.iplayer.android), tap **Share link** or **Share**, then choose **Aurora Store**. You can keep Google Play as your default.
+4. Check that Aurora offers **v1.0.1 (101)** directly under **British Broadcasting Corporation**. This is the Android TV version the patch supports. If you see a different version, check that the Kirkwood profile is selected.
 5. Tap **Install** to download. When Android asks whether to install BBC iPlayer, tap **Cancel**. Dismiss Aurora’s follow-up message if it appears.
-6. Return to Aurora’s **Apps** screen. Tap **Downloads**, press and hold the completed iPlayer row, then tap **Export**. Aurora 4.8.4 saves the APK download as `bbc.iplayer.android.zip`. It contains `base.apk`, `config.en.apk` and `config.xhdpi.apk`. [Aurora Store export code](https://github.com/AuroraOSS/AuroraStore/blob/master/app/src/main/java/com/aurora/store/compose/ui/downloads/DownloadsScreen.kt)
-7. In a file manager, choose **Rename** on `bbc.iplayer.android.zip`. Put the cursor after `.zip`, press Backspace three times to leave the dot, then type `apks`. Save the filename as `bbc.iplayer.android.apks` so Morphe can open it. The demo uses [Material Files](https://github.com/zhanghai/MaterialFiles) because the built-in file picker kept appending `.zip`. [Morphe’s supported APK file formats](https://github.com/MorpheApp/morphe-manager/blob/main/docs/patching-expert-mode.md)
+6. Return to Aurora’s **Apps** screen. Tap **Downloads**, press and hold the completed iPlayer row, and tap **Export**. Save `bbc.iplayer.android.zip` in **Downloads**.
+7. Open **Downloads** in your file manager and choose **Rename** on `bbc.iplayer.android.zip`. Put the cursor after `.zip`, press Backspace three times to keep the dot, and type `apks`. Save the filename as `bbc.iplayer.android.apks` so Morphe can open it. [Material Files, used in the animation](https://github.com/zhanghai/MaterialFiles)
 
-Continue with [Part 2. Patch the APK on your phone](morphe-phone/README.md), or copy the `.apks` file to your computer for Morphe Desktop.
+## Patch and save the APK with Morphe Manager
 
-## Check the version before downloading
+8. Open Morphe Manager. Go to **Settings → Expert mode** and tap **Enable** to confirm.
+9. Return to **Apps** and select **BBC iPlayer (Android TV)**. Check that Morphe recommends **1.0.1, Build 101**. Tap **No, I already have it**, then select `bbc.iplayer.android.apks` in Downloads. [Morphe Expert mode documentation](https://github.com/MorpheApp/morphe-manager/blob/main/docs/patching-expert-mode.md)
+10. Enable **Make iPlayer 1.0.1 work on more TVs** and tap **Patch**.
+11. When patching finishes, tap the **Save** icon and save the signed APK in **Downloads**. Transfer that APK to your Android TV device.
 
-Aurora shows the version directly under **British Broadcasting Corporation** on the listing. In **v1.0.1 (101)**, `1.0.1` is the version name and `101` is Android’s version code. For a later build, read the new code beside its version name and check the patch’s supported versions in Morphe or the patch README. Use an APK version your chosen patch supports.
-
-The animation uses real Android emulator captures with a simulated touch marker. All three APKs in the export matched the files used to test the Morphe patch.
+The walkthrough uses real Android emulator captures from Aurora Store 4.8.4 and Morphe Manager 2.7.0. Aurora’s export contained `base.apk`, `config.en.apk` and `config.xhdpi.apk`. Morphe saved a signed APK with version name `1.0.1` and version code `101`.
