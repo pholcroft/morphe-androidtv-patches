@@ -9,11 +9,7 @@ The patch **Make iPlayer 1.0.1 work on more TVs** targets the Android TV build `
 
 ## Download the Android TV APK
 
-1. Install [Aurora Store](https://auroraoss.com/) on your Android phone and save the [Google TV Streamer device profile](google-tv-streamer-kirkwood.properties) as a `.properties` file.
-2. In Aurora Store, open **Spoof manager** or **Spoofing**. Use the import button to select the file, then select **Google TV Streamer (kirkwood) - experimental**. If the app list stays the same after switching, sign out of Aurora and sign back in so it refreshes the device profile.
-3. Search for **BBC iPlayer**. Check that the version is **1.0.1**. The phone app has the same package name, so the version matters. The profile was used successfully to obtain this version in the UK. Google Play controls availability and may offer a different build.
-4. Tap **Install** in Aurora to start the download. When the Android installation prompt opens, cancel it. Go back to Aurora's **Downloads** screen, press and hold the completed download, then choose **Export**.
-5. Follow [Part 1](walkthroughs/README.md) to rename Aurora's ZIP to `.apks`. Copy the `.apks` file to your computer for Morphe Desktop.
+Follow [Part 1](walkthroughs/README.md) to import the Google TV Streamer profile, share the Play listing to Aurora and download the Android TV APK in Anonymous mode. For Morphe Desktop, copy the resulting `.apks` file to your computer.
 
 ## Patch and install
 
