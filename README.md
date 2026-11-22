@@ -39,7 +39,7 @@
 | 🟡 [Joyn](#joyn) | Pre/mid-roll ads (Joyn's Ad SDK turned off) · 🇩🇪 geo-locked · not yet device-verified | [`6.5.2-ATV-605282491`](https://www.apkmirror.com/apk/sevenone-entertainment-group-gmbh/joyn-deine-streaming-app-android-tv/joyn-deine-streaming-app-android-tv-6-5-2-atv-605282491-release/) ⚠️ experimental | 11/20/26 |
 | 🟢 [Fawesome](#fawesome) | Pre/mid-roll, banner + pause ads · update prompt | `19.7` | 10/26/26 |
 | 🟢 [F1 TV](#f1-tv) | No ads involved: unlocks 4K (UHD) · needs F1 TV Premium | `3.0.49.4-SP166.4.1-release-R54.2-tv` | 10/16/26 |
-| 🟡 [BBC iPlayer](#bbc-iplayer) | TV app compatibility and playback | `0.4.7-dev` (47), legacy Android TV APK | 11/21/26 |
+| 🟡 [BBC iPlayer](#bbc-iplayer) | TV app compatibility and playback | Android TV `0.4.7-dev` (47) and `1.0.1` (101) | 11/21/26 |
 | 🟡 [YouTube (Android TV)](#youtube) | Video ads + sponsored feed items · needs MicroG RE | [`7.31.300`](https://www.apkmirror.com/apk/google-inc/youtube-for-android-tv/youtube-for-android-tv-7-31-300-release/) ⚠️ experimental · `7.05.301` static only | 11/16/26 |
 
 <sub>🟢 Working &nbsp;·&nbsp; 🟡 Partial / testing &nbsp;·&nbsp; 🔴 Under development / broken &nbsp;·&nbsp; Version links go to the exact Android TV release on APKMirror.</sub>
@@ -286,7 +286,13 @@ Read more: [system design teardown](docs/PLUTO_TV_ATV_SYSTEM_DESIGN.md)
 
 <a id="bbc-iplayer"></a>
 <details>
-<summary><b>BBC iPlayer</b> · legacy Android TV compatibility and playback</summary>
+<summary><b>BBC iPlayer</b> · Android TV compatibility and playback</summary>
+
+#### Android TV 1.0.1
+
+**Make iPlayer 1.0.1 work on more TVs** lets the app start without the BBC TV feature flag and uses the Google TV Streamer browser profile. Enable it manually for Android TV `1.0.1` (101) on Android 12 or later. See the [Aurora download and Morphe patching guide](docs/bbc-iplayer/README.md).
+
+#### Legacy Android TV 0.4.7-dev
 
 - **Version** `0.4.7-dev` (47), package `bbc.iplayer.android`, legacy Android TV APK. The phone app shares the package name and uses a different build. The tested APK has SHA-256 `4e511908dd874ed32cf4978f60785a42d7e8ca7b3f9ace3604649abc7e87387d`. Bring your own APK and select it as a local file in Morphe.
 - **Change the TV model iPlayer sees** changes the device profile sent by the app's WebView to resolve the unsupported-device message after installation. The Android device name and firmware are unaffected.
