@@ -11,7 +11,7 @@ On your phone, press and hold the [BBC iPlayer Play listing](https://play.google
 ## Download the APK with Aurora Store
 
 1. In Aurora, open the top-right menu, then **Spoof manager → Device → ⋮ → Import**. In the file picker, open **Downloads** and select the `.properties` file.
-2. Select **Google TV Streamer (kirkwood) - experimental** in the device list, tap **Restart**, then choose **Anonymous** when Aurora asks you to sign in.
+2. Scroll to **Google TV Streamer (kirkwood) - experimental** in the device list and select it. Tap **Restart**, then choose **Anonymous** when Aurora asks you to sign in.
 3. Open this guide in your phone’s browser. Press and hold the [BBC iPlayer Play listing](https://play.google.com/store/apps/details?id=bbc.iplayer.android), tap **Share link** or **Share**, then choose **Aurora Store**. You can keep Google Play as your default.
 4. Check that Aurora offers **v1.0.1 (101)** directly under **British Broadcasting Corporation**. This is the Android TV version the patch supports. If you see a different version, check that the Kirkwood profile is selected.
 5. Tap **Install** to download. When Android asks whether to install BBC iPlayer, tap **Cancel**. Dismiss Aurora’s follow-up message if it appears.
@@ -23,7 +23,7 @@ On your phone, press and hold the [BBC iPlayer Play listing](https://play.google
 8. Return to this guide in your phone’s browser and tap [Add UK TV Patches to Morphe](https://morphe.software/add-source?github=pholcroft/uk-tv-morphe-patches&name=UK%20TV%20Patches). If the link page opens first, tap **Open in Morphe**. In Morphe tap **Add** to confirm.
 9. Go to **Settings → Expert mode** and tap **Enable** to confirm.
 10. Return to **Apps** and select **BBC iPlayer (Android TV)**. Check that Morphe recommends **1.0.1, Build 101**. Tap **No, I already have it**, then select `bbc.iplayer.android.apks` in Downloads. [Morphe Expert mode documentation](https://github.com/MorpheApp/morphe-manager/blob/main/docs/patching-expert-mode.md)
-11. Enable **Make iPlayer 1.0.1 work on more TVs** and tap **Patch**.
+11. Under **UK TV Patches**, enable **Make iPlayer 1.0.1 work on more TVs** and tap **Patch**.
 12. When patching finishes, tap the **Save** icon and save the signed APK in **Downloads**. Transfer that APK to your Android TV device.
 
 The walkthrough uses real Android emulator captures from Aurora Store 4.8.4 and Morphe Manager 2.7.0. Aurora’s export contained `base.apk`, `config.en.apk` and `config.xhdpi.apk`. Morphe saved a signed APK with version name `1.0.1` and version code `101`.

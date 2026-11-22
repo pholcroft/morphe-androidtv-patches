@@ -292,6 +292,8 @@ Read more: [system design teardown](docs/PLUTO_TV_ATV_SYSTEM_DESIGN.md)
 
 **Make iPlayer 1.0.1 work on more TVs** lets the app start without the BBC TV feature flag and uses the Google TV Streamer browser profile. Enable it manually for Android TV `1.0.1` (101) on Android 12 or later. See the [Aurora download and Morphe patching guide](docs/bbc-iplayer/README.md).
 
+[Add UK TV Patches to Morphe](https://morphe.software/add-source?github=pholcroft/uk-tv-morphe-patches&name=UK%20TV%20Patches) on your Android phone.
+
 #### Legacy Android TV 0.4.7-dev
 
 - **Version** `0.4.7-dev` (47), package `bbc.iplayer.android`, legacy Android TV APK. The phone app shares the package name and uses a different build. The tested APK has SHA-256 `4e511908dd874ed32cf4978f60785a42d7e8ca7b3f9ace3604649abc7e87387d`. Bring your own APK and select it as a local file in Morphe.
