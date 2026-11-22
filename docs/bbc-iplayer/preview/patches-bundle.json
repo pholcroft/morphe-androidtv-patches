@@ -1,6 +1,6 @@
 {
   "created_at": "2026-11-22T02:15:00Z",
   "description": "BBC iPlayer Android TV 1.0.1 compatibility preview. For use in the UK.",
-  "download_url": "https://raw.githubusercontent.com/pholcroft/morphe-androidtv-patches/4324e678a8313fb9cac2e3a58343280cbff1b8de/docs/bbc-iplayer/preview/bbc-iplayer-1.0.1.mpp",
+  "download_url": "https://raw.githubusercontent.com/pholcroft/morphe-androidtv-patches/feat/bbc-iplayer-1.0.1-preview/docs/bbc-iplayer/preview/bbc-iplayer-1.0.1.mpp",
   "version": "1.0.1"
 }
