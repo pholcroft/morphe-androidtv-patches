@@ -2,6 +2,11 @@
 
 The patch **Make iPlayer 1.0.1 work on more TVs** targets the Android TV build `1.0.1` (version code `101`) of `bbc.iplayer.android`. It lets the app start on Android TV devices missing the BBC TV feature flag and uses the Google TV Streamer profile in the app's browser. The target device needs Android 12 or later. This is an unofficial compatibility patch for use in the UK. BBC sign-in, geographic checks and DRM still apply.
 
+## Phone walkthroughs
+
+1. [Download and export the stock bundle with Aurora Store](walkthroughs/README.md)
+2. [Patch and save the APK with Morphe Manager](walkthroughs/morphe-phone/README.md)
+
 ## Download the Android TV bundle
 
 1. Install [Aurora Store](https://auroraoss.com/) on your Android phone and save the [Google TV Streamer device profile](google-tv-streamer-kirkwood.properties) as a `.properties` file.
