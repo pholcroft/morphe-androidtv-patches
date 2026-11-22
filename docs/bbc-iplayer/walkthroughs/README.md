@@ -7,10 +7,10 @@ If Aurora search comes up empty, use the [BBC iPlayer Play listing](https://play
 ![Download the BBC iPlayer Android TV APK with Aurora Store and prepare it for Morphe](aurora-iplayer-walkthrough.png)
 
 1. In Aurora, open the top-right menu, then **Spoof manager → Device → ⋮ → Import**. In the file picker, open **Downloads** and select the `.properties` file.
-2. Select **Google TV Streamer (kirkwood) - experimental** in the device list. Tap **Restart** when prompted.
+2. Select **Google TV Streamer (kirkwood) - experimental** in the device list.
 
-   - **Anonymous.** If Aurora asks you to sign in, tap **Anonymous**. The animation uses this option. [Aurora Store FAQ](https://auroraoss.com/wiki)
-   - **Already signed in.** Continue from Aurora’s **Apps** screen with the same steps below.
+   - **UK Google account.** In **Spoof manager → Language**, select **English (United Kingdom)** and tap **Restart** when prompted. Return to the **Apps** screen with your UK Google account active. With this setup, **BBC iPlayer** appeared first in the emulator’s search results and opened as **1.0.1 (101)**.
+   - **Anonymous.** Tap **Restart** after selecting the device profile and choose **Anonymous** if Aurora asks. Use the direct Play link in step 3 if search comes up empty. [Aurora Store FAQ](https://auroraoss.com/wiki)
 
 3. Search for **BBC iPlayer**. If it appears, open its listing. If it’s missing, return to this guide in your phone’s browser and tap the [exact Play listing](https://play.google.com/store/apps/details?id=bbc.iplayer.android). When you see **Continue to Aurora Store?**, tap **Open** and check the version Aurora shows.
 4. If the link goes to Chrome or Play Store instead, go to Android **Settings → Apps → Aurora Store → Open by default**. Turn on **Open supported links**, tap **Add link**, select `play.google.com` and tap **Add**. Then tap the listing link from this guide again. Menu labels may vary by phone. [Android default app settings](https://support.google.com/pixelphone/answer/6271667)
