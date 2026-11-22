@@ -4,6 +4,8 @@ The patch **Make iPlayer 1.0.1 work on more TVs** targets the Android TV build `
 
 ## Phone walkthrough
 
+Android TV build **1.0.1 (101)** is hard to find through ordinary APK searches. The phone app shares the same package name, and older TV builds are also available. The [Aurora Store walkthrough](walkthroughs/README.md#download-the-apk-with-aurora-store) shows how to get build 101 in Anonymous mode with our Google TV Streamer profile.
+
 [Add UK TV Patches to Morphe](https://morphe.software/add-source?github=pholcroft/uk-tv-morphe-patches&name=UK%20TV%20Patches) on an Android phone with Morphe Manager installed.
 
 [Download, patch and save the APK on your phone](walkthroughs/README.md).
