@@ -4,7 +4,7 @@ The patch **Make iPlayer 1.0.1 work on more TVs** targets the Android TV build `
 
 ## Phone walkthroughs
 
-1. [Download and export the stock bundle with Aurora Store](walkthroughs/README.md)
+1. [Download with Aurora Store and prepare the split bundle](walkthroughs/README.md)
 2. [Patch and save the APK with Morphe Manager](walkthroughs/morphe-phone/README.md)
 
 ## Download the Android TV bundle
@@ -12,8 +12,8 @@ The patch **Make iPlayer 1.0.1 work on more TVs** targets the Android TV build `
 1. Install [Aurora Store](https://auroraoss.com/) on your Android phone and save the [Google TV Streamer device profile](google-tv-streamer-kirkwood.properties) as a `.properties` file.
 2. In Aurora Store, open **Spoof manager** or **Spoofing**. Use the import button to select the file, then select **Google TV Streamer (kirkwood) - experimental**. If the app list stays the same after switching, sign out of Aurora and sign back in so it refreshes the device profile.
 3. Search for **BBC iPlayer**. Check that the version is **1.0.1**. The phone app has the same package name, so the version matters. The profile was used successfully to obtain this version in the UK. Google Play controls availability and may offer a different build.
-4. Tap **Install** in Aurora to start the download. When the Android installation prompt opens, cancel it. Go back to Aurora's **Downloads** screen. Long-press the completed download, choose **Export app bundle**, and save it. The [Aurora Store FAQ](https://auroraoss.com/wiki) documents bundle export.
-5. Copy the export to your computer. The tested archive contained `base.apk`, `config.en.apk` and `config.xhdpi.apk`. Keep the APKs together. If Aurora saved an ordinary `.zip` containing the APKs at its top level, rename the file extension to `.apks` for Morphe Desktop.
+4. Tap **Install** in Aurora to start the download. When the Android installation prompt opens, cancel it. Go back to Aurora's **Downloads** screen, press and hold the completed download, then choose **Export**.
+5. Follow [Part 1](walkthroughs/README.md) to rename Aurora's ZIP to `.apks`. Copy the bundle to your computer for Morphe Desktop.
 
 ## Patch and install
 

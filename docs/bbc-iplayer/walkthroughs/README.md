@@ -2,7 +2,7 @@
 
 Start at Aurora Store’s **Apps** screen with Aurora already installed and set up. Save the [Google TV Streamer profile](https://github.com/pholcroft/morphe-androidtv-patches/blob/feat/bbc-iplayer-1.0.1-preview/docs/bbc-iplayer/google-tv-streamer-kirkwood.properties) to your phone’s Downloads folder before starting.
 
-![Aurora Store 4.8.4 on Android showing profile import, the BBC iPlayer 1.0.1 listing and export of its three APKs to a ZIP](aurora-iplayer-walkthrough.png)
+![Aurora Store on Android showing profile import, the BBC iPlayer 1.0.1 listing, export of its three APKs to a ZIP, and renaming the bundle for Morphe](aurora-iplayer-walkthrough.png)
 
 1. In Aurora, open the top-right menu, then **Spoof manager → Device → ⋮ → Import**. In the file picker, open **Downloads** and select the `.properties` file.
 2. Select **Google TV Streamer (kirkwood) - experimental** in the device list. Tap **Restart** when prompted, then sign in again.
@@ -10,8 +10,10 @@ Start at Aurora Store’s **Apps** screen with Aurora already installed and set 
 
    **Method 2. Open the listing directly.** If search misses iPlayer, open the [exact Play listing](https://play.google.com/store/apps/details?id=bbc.iplayer.android) with Aurora Store. If Android keeps opening Play Store, check **Settings → Apps → Aurora Store → Open by default** for supported links. The animation shows this route with an anonymous session.
 4. Tap **Install** to download. When Android asks whether to install BBC iPlayer, tap **Cancel**. Dismiss Aurora’s follow-up message if it appears.
-5. Return to Aurora’s **Apps** screen. Tap **Downloads**, long-press the completed iPlayer row and tap **Export**. Save `bbc.iplayer.android.zip`.
-6. Confirm the ZIP includes `base.apk`, `config.en.apk` and `config.xhdpi.apk`. Continue with [Part 2. Patch the bundle on your phone](morphe-phone/README.md), or copy the ZIP to your computer and rename it to `.apks` for Morphe Desktop. [Morphe Desktop split bundle documentation](https://github.com/MorpheApp/morphe-desktop/blob/main/docs/documentation.md)
+5. Return to Aurora’s **Apps** screen. Tap **Downloads**, press and hold the completed iPlayer row, then tap **Export**. In Aurora 4.8.4 this saves `bbc.iplayer.android.zip`, containing `base.apk`, `config.en.apk` and `config.xhdpi.apk`. [Aurora Store export code](https://github.com/AuroraOSS/AuroraStore/blob/master/app/src/main/java/com/aurora/store/compose/ui/downloads/DownloadsScreen.kt)
+6. In a file manager, rename `bbc.iplayer.android.zip` to `bbc.iplayer.android.apks` so Morphe can select it as a split bundle. This changes the filename extension and keeps all three APKs in the same archive. The demo uses [Material Files](https://github.com/zhanghai/MaterialFiles) because the built-in file picker kept appending `.zip`. Check the filename ends in `.apks`. [Morphe split-bundle formats](https://github.com/MorpheApp/morphe-manager/blob/main/docs/patching-expert-mode.md)
+
+Continue with [Part 2. Patch the bundle on your phone](morphe-phone/README.md), or copy the `.apks` to your computer for Morphe Desktop.
 
 ## Check the version before downloading
 
