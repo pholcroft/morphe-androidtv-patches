@@ -18,13 +18,13 @@ The patch **Make iPlayer 1.0.1 work on more TVs** targets the Android TV build `
 ## Patch and install
 
 1. In [Morphe Desktop](https://github.com/MorpheApp/morphe-desktop), add the patch source or load the local `.mpp` bundle containing this patch. Select your `.apks` file. Morphe Desktop merges the splits before patching. See the [Morphe Desktop documentation](https://github.com/MorpheApp/morphe-desktop/blob/main/docs/documentation.md).
-2. Enable **Make iPlayer 1.0.1 work on more TVs**. For a side-by-side install with another iPlayer build, also add the [official Morphe patch bundle](https://github.com/MorpheApp/morphe-patches/releases/tag/v2.3.0), enable **Clone app**, and set its **Package name** to `bbc.iplayer.android.tvtest`.
+2. Enable **Make iPlayer 1.0.1 work on more TVs**.
 3. Run Morphe and install the resulting APK on your TV. Open the app and use the normal BBC sign-in flow. For an initial test, try an on-demand episode and a live channel.
 
-The equivalent command in Morphe Desktop 2.3.0 is below. Put the JAR, both patch bundles and the exported APK bundle in the same folder. Use the local `bbc-iplayer-1.0.1.mpp` or substitute the name of a patch bundle containing **Make iPlayer 1.0.1 work on more TVs**.
+The equivalent command in Morphe Desktop 2.3.0 is below. Put the JAR, patch bundle and exported APK bundle in the same folder. Use the [preview patch bundle](preview/bbc-iplayer-1.0.1.mpp) or another bundle containing **Make iPlayer 1.0.1 work on more TVs**.
 
 ```text
-java -jar morphe-desktop-2.3.0.jar patch --exclusive --patches bbc-iplayer-1.0.1.mpp --enable "Make iPlayer 1.0.1 work on more TVs" --patches patches-2.3.0.mpp --options packageName=bbc.iplayer.android.tvtest --enable "Clone app" --out iplayer-tvtest.apk iplayer-stock.apks
+java -jar morphe-desktop-2.3.0.jar patch --exclusive --patches bbc-iplayer-1.0.1.mpp --enable "Make iPlayer 1.0.1 work on more TVs" --out iplayer-patched.apk iplayer-stock.apks
 ```
 
 Version 1.0.1 launched, signed in and started video playback on a Thomson Streaming Box Plus 270 alongside the legacy build. The Thomson catalogue showed UHD badges. Actual UHD stream resolution and live TV playback are still unverified.
