@@ -40,8 +40,9 @@
 | 🟢 [Fawesome](#fawesome) | Pre/mid-roll, banner + pause ads · update prompt | `19.7` | 10/26/26 |
 | 🟢 [F1 TV](#f1-tv) | No ads involved: unlocks 4K (UHD) · needs F1 TV Premium | `3.0.49.4-SP166.4.1-release-R54.2-tv` | 10/16/26 |
 | 🟡 [YouTube (Android TV)](#youtube) | Video ads + sponsored feed items · needs MicroG RE | [`7.31.300`](https://www.apkmirror.com/apk/google-inc/youtube-for-android-tv/youtube-for-android-tv-7-31-300-release/) ⚠️ experimental · `7.05.301` static only | 11/16/26 |
+| 🟡 [BBC iPlayer](#bbc-iplayer) | TV compatibility · 🇬🇧 UK only | [`1.0.1` (101)](https://www.apkmirror.com/apk/british-broadcasting-corporation/bbc-iplayer-android-tv-2/bbc-iplayer-android-tv-1-0-1-release/bbc-iplayer-android-tv-1-0-1-android-apk-download/) ⚠️ experimental | 11/27/26 |
 
-<sub>🟢 Working &nbsp;·&nbsp; 🟡 Partial / testing &nbsp;·&nbsp; 🔴 Under development / broken &nbsp;·&nbsp; Version links go to the exact Android TV release on APKMirror.</sub>
+<sub>🟢 Working &nbsp;·&nbsp; 🟡 Partial / testing &nbsp;·&nbsp; 🔴 Under development / broken &nbsp;·&nbsp; APKMirror links identify the exact Android TV release. See app notes for any exceptions to direct downloads.</sub>
 
 <a id="install"></a>
 
@@ -49,7 +50,7 @@
 
 Every patch uses the same workflow in **Morphe Manager**:
 
-1. Open the app's **version link** in the table above and download the **`.apkm`** bundle. If a release lists more than one, pick the one whose architecture includes **`armeabi-v7a`**.
+1. Open the app's **version link** in the table above and download the **`.apkm`** bundle where available. For iPlayer, see its [app notes](#bbc-iplayer). If a release lists more than one, pick the one whose architecture includes **`armeabi-v7a`**.
 2. In Morphe Manager, check that **Optimize for device architecture** is **off**.
 3. Select the `.apkm` file and apply the patch.
 
@@ -305,6 +306,17 @@ Read more: [system design teardown](docs/PLUTO_TV_ATV_SYSTEM_DESIGN.md)
 - **Ads can come back.** The ad logic is JavaScript served from `youtube.com/tv`, so it can change without an app update. If an ad shows up, update to the newest patch first.
 
 </details>
+<a id="bbc-iplayer"></a>
+<details>
+<summary><b>📺 BBC iPlayer</b> · Android TV compatibility</summary>
+
+- **Version:** [Android TV 1.0.1 (build 101)](https://www.apkmirror.com/apk/british-broadcasting-corporation/bbc-iplayer-android-tv-2/bbc-iplayer-android-tv-1-0-1-release/bbc-iplayer-android-tv-1-0-1-android-apk-download/), package `bbc.iplayer.android`, requires Android 12 or later. APKMirror lists the build and links to Google Play. Use a complete stock export from a supported Android TV with build 101 installed.
+- **Export with ADB:** run `adb shell pm path bbc.iplayer.android` on the source TV, then run `adb pull <path>` for each path listed after `package:`. ZIP `base.apk` and the split APKs at the root of the archive, save it as `.apks`, and select it in Morphe Manager.
+- **Make iPlayer 1.0.1 work on more TVs:** enable this optional patch to allow startup on TVs missing the BBC TV feature flag and use the Google TV Streamer profile in the WebView.
+- **Use in the UK.** BBC sign-in, geographic checks and DRM still apply.
+
+</details>
+
 <a id="why"></a>
 
 ## 🧭 Why this exists
